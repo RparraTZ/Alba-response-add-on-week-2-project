@@ -33,6 +33,17 @@ header h2 {
   font-size: 40px;
   font-weight: 400;
   margin-top: 0;
+  margin-bottom: 40px;
+}
+header .button {
+  padding: 12px 32px;
+  text-decoration: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+  letter-spacing: 3px;
+  border: none;
 }
 .text-center {
   text-align: center;
