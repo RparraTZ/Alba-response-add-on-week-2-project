@@ -59,7 +59,8 @@ main img {
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
 }
-main h3 {
+main h3,
+section h2 {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
@@ -75,6 +76,49 @@ main h4 {
 main p {
   font-size: 16px;
   color: #272044;
+  opacity: 70%;
+}
+section {
+  background-color: #f8f8f8;
+  padding: 50px;
+  color: #272044;
+}
+section .card-container {
+  background-color: white;
+}
+section h3 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+section img {
+  width: 100%;
+  object-fit: cover;
+}
+section .grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: #ffffff;
+}
+section .grid-card-visuals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section .card-info-text {
+  padding: 0 25px;
+}
+section iframe {
+  aspect-ratio: 1/1;
+}
+section h4 {
+  font-size: 24px;
+}
+section h5 {
+  font-size: 13px;
+  font-weight: bold;
+}
+section p {
+  font-size: 16px;
   opacity: 70%;
 }
 footer {
