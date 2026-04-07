@@ -1,15 +1,18 @@
 :root {
   --primary-color: #462cb2;
 }
+.text-center {
+  text-align: center;
+}
 body {
   font-family: poppins;
   background-color: #272044;
   padding: 0;
-  margin: 0;
+  margin: 10px 40px;
 }
 header {
   background-image:
-    linear-gradient(rgba(39, 32, 68, 0.6), rgba(39, 32, 68, 0.6)),
+    linear-gradient(rgba(39, 32, 68, 0.4), rgba(39, 32, 68, 0.6)),
     url("/images/lisbon-hero-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,10 +48,39 @@ header .button {
   letter-spacing: 3px;
   border: none;
 }
-.text-center {
-  text-align: center;
+
+footer {
+  background-image:
+    linear-gradient(rgba(39, 32, 68, 0.8), rgba(39, 32, 68, 0.8)),
+    url("/images/footer-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 30px 100px;
+  line-height: 1.5;
 }
+footer p {
+  color: white;
+  opacity: 60%;
+}
+footer a {
+  color: white;
+  opacity: 60%;
+  text-decoration: none;
+}
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-gap: 40px;
+}
+
 @media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  header {
+    background-position: 10% 50%;
+  }
   header h1 {
     font-size: 36px;
   }
@@ -57,5 +89,13 @@ header .button {
   }
   header p {
     font-size: 18px;
+  }
+  footer {
+    background-image: none;
+    background-color: rgba(39, 32, 68, 0.8);
+  }
+  .grid-3-columns {
+    padding: 10px;
+    grid-template-columns: 1fr;
   }
 }
