@@ -4,6 +4,20 @@
 .text-center {
   text-align: center;
 }
+.grid {
+  display: grid;
+  gap: 20px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3-narrow {
+  grid-template-columns: 1fr 2fr 2fr;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 body {
   font-family: poppins;
 }
@@ -13,11 +27,10 @@ header {
     url("/images/lisbon-hero-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
-}
-header {
   padding: 200px 0;
   color: white;
 }
+
 header p {
   font-size: 24px;
   font-weight: bold;
@@ -82,9 +95,11 @@ section {
   background-color: #f8f8f8;
   padding: 50px;
   color: #272044;
+  text-align: center;
 }
 section .card-container {
   background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 section h3 {
   font-size: 48px;
@@ -98,7 +113,7 @@ section img {
 section .grid-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: #ffffff;
+  grid-gap: 25px;
 }
 section .grid-card-visuals {
   display: grid;
@@ -121,6 +136,18 @@ section p {
   font-size: 16px;
   opacity: 70%;
 }
+.cafe-button {
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  padding: 15px 20px;
+  margin-bottom: 35px;
+}
 footer {
   background-image:
     linear-gradient(rgba(39, 32, 68, 0.8), rgba(39, 32, 68, 0.8)),
@@ -140,7 +167,7 @@ footer a {
   opacity: 60%;
   text-decoration: none;
 }
-.grid-3-columns {
+footer.grid-3-columns {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   grid-gap: 40px;
@@ -169,12 +196,14 @@ footer a {
   main {
     padding: 20px 15px;
   }
-  .grid-2-columns {
+  .grid {
     padding: 10px;
     grid-template-columns: 1fr;
   }
-  .grid-3-columns {
-    padding: 10px;
+  section .grid-cards {
+    grid-template-columns: 1fr;
+  }
+  footer.grid-3-columns {
     grid-template-columns: 1fr;
   }
 }
