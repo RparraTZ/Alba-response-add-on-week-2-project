@@ -217,5 +217,6 @@ footer a {
   }
   footer {
     text-align: center;
+    background-size: auto;
   }
 }
