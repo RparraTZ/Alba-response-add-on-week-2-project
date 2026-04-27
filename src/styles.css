@@ -2,6 +2,17 @@
   --primary-color: #462cb2;
   --main-text-color: #272044;
 }
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box; /* Makes sure padding doesn't push elements past 100% width */
+}
 .text-center {
   text-align: center;
 }
@@ -142,6 +153,20 @@ section {
   padding-top: 100px;
   padding-bottom: 50px;
 }
+.instagram-gallery {
+  max-width: 100vw;
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.intagram-container {
+  flex: 0 0 auto;
+  width: 350px;
+}
+
 footer {
   background-image:
     linear-gradient(rgba(39, 32, 68, 0.8), rgba(39, 32, 68, 0.8)),
@@ -210,13 +235,27 @@ footer a {
     object-fit: cover;
     display: block;
   }
-  .instagram-gallery {
-    display: flex;
-    overflow-x: auto;
-    padding-bottom: 30px;
-  }
-  footer {
-    text-align: center;
-    background-size: auto;
+
+  @media (max-width: 768px) {
+    /* ... keep your header and main fixes as they are ... */
+
+    .instagram-gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory; /* Makes the scroll feel "magnetic" */
+      justify-content: flex-start; /* FIXED: This allows you to see the first post! */
+      padding-inline: 20px; /* Gives a nice gap on the edges */
+      max-width: 100%;
+    }
+
+    .intagram-container {
+      flex: 0 0 85%; /* Each post takes 85% of screen, showing a "peek" of the next */
+      scroll-snap-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px; /* Reduced side padding so it's not squished to 75% */
+    }
   }
 }
